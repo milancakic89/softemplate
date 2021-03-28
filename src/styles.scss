@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import './scss/main';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dark-theme {
+
+    p,
+    h1,
+    a,
+    span,
+    label,
+    h2,
+    h3,
+    h4 {
+        color: #fff;
+    }
+}

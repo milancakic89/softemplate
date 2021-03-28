@@ -1,0 +1,94 @@
+@import './../../scss/variables';
+
+
+.opened-nav, .navigation{
+    position: relative;
+    transition: all .3s linear;
+    padding: 10px;
+    background-color: $navigation-color;
+    width: 250px;
+    height: calc(100vh - (#{$footerHeight} + #{$headerHeight}));
+}
+.closed-nav{
+    width: 40px;
+    padding: 0;
+}
+.opened-icon{
+
+}
+.burger{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .icon{
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 15px;
+        height: 20px;
+        cursor: pointer;
+
+        &:hover{
+            span{
+                background-color: rgb(216, 216, 216);
+            }
+        }
+        span{
+            height: 2px;
+            background-color: #fff;
+            width: 100%;
+
+        }
+        span:nth-child(1){
+            transform: rotate(-45deg) translateY(5px);
+        }
+        span:nth-child(2){
+            transform: rotate(45deg) translateY(-5px);
+        }
+    }
+    .closed-icon{
+        visibility: hidden;
+    }
+}
+
+.icon-fixed{
+    transition: all .3s linear;
+    position: fixed;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content:  space-between;
+    top: 70px;
+    left: 25px;
+    width: 15px;
+    height: 20px;
+    z-index: 1000;
+
+    span{
+        height: 2px;
+        background-color: #fff;
+        width: 100%;
+        display: inline-block;
+    }
+
+    span:nth-child(1){
+        margin-top: 4px;
+        transform: rotate(-135deg) translateY(0px);
+    }
+    span:nth-child(2){
+        margin-bottom: 4px;
+        transform: rotate(-45deg) translateY(0px);
+    }
+}
+.show{
+    transform: translateX(0%);
+    display: flex;
+}
+.hide{
+    display: flex;
+    transform: translateX(-100px);
+}

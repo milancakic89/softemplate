@@ -1,0 +1,12 @@
+<div class="icon icon-fixed" (click)="toggleNav()" [ngClass]="openNavigation ? 'hide' : 'show'">
+    <span></span>
+    <span></span>
+</div>
+<div class="navigation" [ngClass]="openNavigation ? 'opened-nav' : 'closed-nav'">
+    <div class="burger">
+        <div class="icon" (click)="toggleNav()" [ngClass]="openNavigation ? 'opened-icon' : 'closed-icon'">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
