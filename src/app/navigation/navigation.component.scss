@@ -4,7 +4,12 @@
 .opened-nav, .navigation{
     position: relative;
     transition: all .3s linear;
-    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px;
     background-color: $navigation-color;
     width: 250px;
     height: calc(100vh - (#{$footerHeight} + #{$headerHeight}));
@@ -13,11 +18,45 @@
     width: 40px;
     padding: 0;
 }
-.opened-icon{
+a{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: all .3s linear;
+    border-top: 1px solid rgba(128, 128, 128, 0.1);
+    padding: 10px 5px;
+    width: 100%;
+    min-width: 200px;
+    white-space: nowrap;
 
+}
+a:hover{
+    span,
+    i{
+        color: chocolate;
+    }
+    
+}
+
+.show-link{
+    span:nth-child(1){
+        display: inline-block;
+    }
+    span:nth-child(2){
+        display: none;
+    }
+}
+.hide-link{
+    span:nth-child(1){
+        display: none;
+    }
+    span:nth-child(2){
+        display: inline-block;
+    }
 }
 .burger{
     width: 100%;
+    margin: 7px 0;
     height: 25px;
     display: flex;
     justify-content: flex-end;
@@ -53,6 +92,9 @@
     .closed-icon{
         visibility: hidden;
     }
+    .opened-icon{
+        margin-right: 10px;
+    }
 }
 
 .icon-fixed{
@@ -63,7 +105,7 @@
     flex-direction: column;
     justify-content:  space-between;
     top: 70px;
-    left: 25px;
+    left: 20px;
     width: 15px;
     height: 20px;
     z-index: 1000;
