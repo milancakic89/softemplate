@@ -1,1 +1,26 @@
-<a [routerLink]="['/login']">Login</a>
+<div class="fullwidth-center">
+    <form #f="ngForm" (ngSubmit)="onFormSubmit(f)" class="form" [ngClass]="!f.valid ? 'invalid-form' : 'valid-form'">
+        <h3>SofTemplate</h3>
+        <label for="">Username</label>
+        <input type="text" value="" min="5" [(ngModel)]="username" name="username" #user required
+            [ngClass]="!f.valid ? 'invalid' : 'valid'" />
+        <label for="">Password</label>
+        <input type="password" value="" min="5" [(ngModel)]="password" name="password" #pass required
+            [ngClass]="!f.valid ? 'invalid' : 'valid' "/>
+        <label for="">Repeat password</label>
+        <input type="password" value="" min="5" [(ngModel)]="repeatPassword" name="repeat" #repeat required
+            [ngClass]="!f.valid ? 'invalid' : 'valid'" />
+        <div class="checkbox-wrapper">
+            <input type="checkbox" value="" [(ngModel)]="agreeTerms" name="terms" #terms required
+                [ngClass]="!f.valid ? 'invalid' : 'valid'" />
+            <label for="">By checking this box you agree to our
+                <a [routerLink]="['/terms']">Terms</a></label>
+        </div>
+        <div>
+            <a class="btn btn-secondary" [routerLink]="['/']">Cancel</a>
+            <button type="submit" [disabled]="f.valid !== true"  [ngClass]="!f.valid ? 'invalid' : ''"  class="btn btn-primary">
+                Register
+            </button>
+        </div>
+    </form>
+</div>

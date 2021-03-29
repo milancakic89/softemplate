@@ -1,3 +1,4 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css';
 @import './scss/main';
 
 *{
@@ -23,4 +24,71 @@ body {
     h4 {
         color: #fff;
     }
+    input{
+        border: none;
+        border-right: 4px;
+        height: 35px;
+        margin: 10px 0;
+        min-width: 200px;
+        
+    }
+    input[type='checkbox']{
+        min-width: 30px;
+        margin: 0px 10px 0px 0px;
+        cursor: pointer;
+    }
+
+    .btn{
+        border: none;
+        &-primary{
+            max-width: 120px;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: rgb(255, 46, 46);
+            color: rgb(255, 255, 255);
+            margin-left: 15px;
+            a{
+                text-decoration: none;
+            }
+            &:hover{
+                background-color: rgb(146, 0, 0);
+            }
+        }
+        &-secondary{
+            text-align: center;
+            text-decoration: none;
+            color: rgb(90, 90, 90);
+
+            a{
+                text-decoration: none;
+            }
+            &:hover{
+                background-color: darkkhaki;
+            }
+        }
+        &-logout{
+            max-width: 120px;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: rgb(255, 46, 46);
+            color: rgb(255, 255, 255);
+            margin-left: 0px;
+        }
+    }
+    .invalid{
+        background-color: gray;
+        border: 1px solid red !important;
+    }
+    .invalid-form{
+        border: 1px solid red !important;
+    }
+    .valid-form, .valid{
+        border: 1px solid rgb(0, 163, 68) !important;
+    }
+}
+
+.bg-red{
+    color: red;
 }

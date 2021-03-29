@@ -8,6 +8,7 @@ import { HeaderComponent } from './../header/header.component';
 import { FooterComponent } from './../footer/footer.component';
 import { NavigationComponent } from './../navigation/navigation.component';
 import { ToolsComponent } from './../tools/tools.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path: '', component: MainScreenComponent}
@@ -23,6 +24,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(routes)
   ]
 })

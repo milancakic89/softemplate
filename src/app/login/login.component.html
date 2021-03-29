@@ -1,2 +1,15 @@
-<a [routerLink]="['/main']">Login</a><br/>
-<a [routerLink]="['/register']">Register</a>
+<div class="fullwidth-center">
+    <form #l="ngForm" (ngSubmit)="onFormSubmit(l)" class="form" [ngClass]="!l.valid ? 'invalid-form' : 'valid-form'">
+        <h3>SofTemplate</h3>
+        <label for="">Username</label>
+        <input type="text" value="" min="5" [(ngModel)]="username" name="username" #user required
+            [ngClass]="!l.valid ? 'invalid' : 'valid' " />
+        <label for="">Password</label>
+        <input type="password" value="" min="5" [(ngModel)]="password" name="password" #pass required
+            [ngClass]="!l.valid ? 'invalid' : 'valid' " />
+        <div>
+            <a class="btn btn-secondary" [routerLink]="['/register']">Register</a>
+            <button type="submit" [disabled]="l.valid !== true"  [ngClass]="!l.valid ? 'invalid' : ''" class="btn btn-primary">Login</button><br />
+        </div>
+    </form>
+</div>

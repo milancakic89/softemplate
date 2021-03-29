@@ -21,10 +21,12 @@
 a{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-decoration: none;
     transition: all .3s linear;
     border-top: 1px solid rgba(128, 128, 128, 0.1);
-    padding: 10px 5px;
+    height: 40px;
+    padding-left: 12px;
     width: 100%;
     min-width: 200px;
     white-space: nowrap;
@@ -52,6 +54,11 @@ a:hover{
     }
     span:nth-child(2){
         display: inline-block;
+        min-width: 18px;
+        text-align: center;
+        i{
+            font-size: 18px;
+        }
     }
 }
 .burger{
@@ -133,4 +140,7 @@ a:hover{
 .hide{
     display: flex;
     transform: translateX(-100px);
+}
+.logout{
+    margin-top: 20px;
 }
