@@ -2,6 +2,13 @@
 
 .header{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $header-color;
     height: $headerHeight;
+
+    h1{
+        text-align: center;
+    }
 }
