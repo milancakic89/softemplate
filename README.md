@@ -19,5 +19,8 @@ Closed navigation
 
 
 
+### check it out with Modals added (not included in the template)
+
+https://softemplate.cakicmilan.com/
 
 # Run npm install -> ng serve
